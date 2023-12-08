@@ -1,0 +1,115 @@
+\documentclass[a3paper,11pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[landscape]{geometry}
+\usepackage[table]{xcolor} % For table colors
+\usepackage{fancyhdr} % For header and footer
+
+% Header and footer configuration
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Carlos Padilla}
+\lhead{Comparison of Multimodal NoSQL Databases}
+\rfoot{Page \thepage}
+
+\title{Comparison of Multimodel Databases}
+\author{Carlos Ignacio Padilla Herrera}
+\date{December 8, 2023}
+
+% Increase font size for the entire document except for the table
+\renewcommand{\normalsize}{\fontsize{12}{14.4}\selectfont} % Increase font size
+\normalsize % Apply the new font size
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section*{Introduction}
+
+Multimodal NoSQL databases represent a significant advancement in the field of data management and storage. Unlike traditional relational databases, which are limited to structured data and a predefined schema, multimodal databases excel in handling a variety of data types - structured, semi-structured, and unstructured. This flexibility makes them an indispensable tool in today's data-driven world, where the volume, velocity, and variety of data are ever-increasing.
+
+One of the key strengths of multimodal NoSQL databases is their ability to store and process different data models, such as document, key-value, graph, and columnar formats, within a single database. This capability eliminates the need for multiple databases to manage different data types, simplifying the architecture and reducing overhead. Furthermore, these databases are designed to scale horizontally, making them well-suited for cloud computing environments and large-scale applications.
+
+The versatility of multimodal NoSQL databases makes them ideal for various applications, from real-time analytics and big data processing to mobile apps and IoT systems. They provide the agility and performance necessary to handle complex queries, large data sets, and high transaction rates. Moreover, their schema-less nature allows for rapid development and iteration, which is crucial in modern agile and DevOps practices.
+
+Multimodel databases are at the forefront of addressing the challenges posed by modern data management requirements. Their ability to efficiently handle diverse data types, scale dynamically, and support rapid development makes them a cornerstone in the landscape of database technology.
+
+\newpage
+
+\section*{Databases Considered}
+
+\subsection*{ArangoDB}
+ArangoDB is a native multi-model database known for its flexibility and scalability. It supports document, key-value, and graph data models within a single, integrated backend. This makes ArangoDB exceptionally versatile for various applications. It features a unique query language, AQL (ArangoDB Query Language), which is powerful for complex queries, especially in graph computing. Its performance in handling connected data and complex joint operations sets it apart from its peers.
+
+ArangoDB is often used in scenarios requiring high flexibility and scalability, such as real-time analytics, e-commerce applications, and network analysis. Its open-source nature and community-driven development contribute to its robust feature set and growing popularity.
+
+\subsection*{Cosmos DB}
+Microsoft's Azure Cosmos DB is a globally distributed, multi-model database service. It excels in large-scale applications requiring global distribution and horizontal scalability. Cosmos DB supports multiple APIs, including SQL, MongoDB, Cassandra, Gremlin, and Table API, enabling diverse data models like document, key-value, graph, and column-family.
+
+Its globally distributed architecture ensures low-latency access to data regardless of geographic location, making it ideal for global applications. Key features like turnkey global distribution, multi-region writes, and comprehensive SLAs make Cosmos DB a top choice for enterprises requiring extensive scalability and high availability.
+
+\subsection*{FaunaDB}
+FaunaDB stands out with its serverless approach, catering to modern cloud-based applications. It offers a flexible, multi-model system, supporting document and relational models, and is known for its ease of use and security features. FaunaDB's serverless architecture means it can automatically scale up or down based on demand, making it cost-effective and efficient for sporadic workloads.
+
+The database is well-suited for web and mobile applications, especially those requiring a flexible, scalable backend without the complexity of traditional database management. FaunaDB's Temporal Queries feature, allowing developers to query historical data states, is particularly noteworthy.
+
+\subsection*{OrientDB}
+OrientDB is a versatile multi-model database that supports document and graph models. It's known for its flexibility in managing complex data structures and relationships. The database offers SQL as well as Gremlin query languages, making it adaptable for various use cases.
+
+OrientDB is particularly effective in scenarios where relationships and connections between data points are crucial, such as social networks, recommendation engines, and fraud detection systems. Its open-source nature and robust community support are key factors in its widespread adoption.
+
+\subsection*{MarkLogic}
+MarkLogic is a multi-model NoSQL database designed for enterprise-scale applications. It supports document, graph, and relational models, with a strong emphasis on security and data integration. MarkLogic's key features include semantic data storage, bitemporal data handling, and advanced search capabilities, making it suitable for complex data integration tasks.
+
+It's widely used in sectors like finance, healthcare, and publishing, where data security, reliability, and integration are paramount. MarkLogic's proprietary nature ensures dedicated support and continuous updates, which are crucial for enterprise applications.
+
+\newpage
+
+
+\section*{Comparison Criteria}
+Explanation of the categories or criteria used for the comparison (such as database type, scalability, performance, query language, etc.).
+\newpage
+
+% Table with integrated images
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|X|X|X|X|X|}
+\hline
+\rowcolor{gray!25}
+& \textbf{ArangoDB} & \textbf{Cosmos DB} & \textbf{FaunaDB} & \textbf{OrientDB} & \textbf{MarkLogic} \\
+\hline
+\cellcolor{gray!25}\textbf{Logo} & \includegraphics[width=4.5cm]{arango.png} & \includegraphics[width=2cm]{path-to-cosmosdb-image.jpg} & \includegraphics[width=2cm]{path-to-faunadb-image.jpg} & \includegraphics[width=2cm]{path-to-orientdb-image.jpg} & \includegraphics[width=2cm]{path-to-marklogic-image.jpg} \\
+\hline
+\rowcolor{gray!15} Type & Multimodel & Multimodel & Multimodel & Multimodel & Multimodel \\
+\hline
+Scalability & High & Very High & High & High & High \\
+\hline
+\rowcolor{gray!15} Performance & High & High & High & High & High \\
+\hline
+Query Language & AQL (ArangoDB Query Language) & SQL API, MongoDB API, Cassandra API, Gremlin API, Table API & FQL (Fauna Query Language) & SQL, Gremlin & XQuery, JavaScript, SQL \\
+\hline
+\rowcolor{gray!15} Unique Features & Graph & Geospatial, Turnkey global distribution & Temporal queries, Serverless & Graph, Document & Semantic data, Bitemporal \\
+\hline
+License Type & Open Source & Proprietary & Proprietary & Open Source & Proprietary \\
+\hline
+\rowcolor{gray!15} Primary Use Case & Complex Queries, Graphs & Global Distribution, Large-scale applications & Serverless Applications, Modern Web Apps & Multi-Model, Graphs & Enterprise, Large-scale Integration \\
+\hline
+Data Model & Document, Graph, Key-Value & Document, Column, Key-Value, Graph & Document & Document, Graph & Document, Graph, Relational \\
+\hline
+\rowcolor{gray!15} Cloud Compatibility & AWS, Google Cloud, Azure & Azure & AWS, Google Cloud, Azure & AWS, Google Cloud, Azure & AWS, Google Cloud, Azure \\
+\hline
+Community Support & Strong & Strong & Growing & Strong & Strong \\
+\hline
+\rowcolor{gray!15} Security Features & Advanced & Advanced & Advanced & Advanced & Advanced \\
+\hline
+\end{tabularx}
+\end{table}
+\newpage
+
+\section*{Conclusions}
+Your conclusions based on the comparison made.
+\end{document}
+
